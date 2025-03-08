@@ -40,3 +40,17 @@ export const registerUser = async (userData) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+
+// Get All Tweets
+export const getAllTweets = async () => {
+  try {
+    console.log(" Fetching Tweets...");
+    const response = await API.get("/tweets/show_tweet");
+    console.log(" Tweets Fetched:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Fetch Tweets Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
