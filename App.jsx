@@ -7,11 +7,7 @@ import Profile from "./pages/Profile";
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+
     </Router>
   );
 };
