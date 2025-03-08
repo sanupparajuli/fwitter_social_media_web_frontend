@@ -27,3 +27,16 @@ export const loginUser = async (userData) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+// User Registration
+export const registerUser = async (userData) => {
+  try {
+    console.log(" Sending Registration Data:", userData); //  Log request
+    const response = await API.post("/users/register", userData);
+    console.log(" Registration Success:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(" Registration Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
