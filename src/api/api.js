@@ -140,3 +140,16 @@ export const getUserProfile = async () => {
     throw error;
   }
 };
+
+  // Update User Profile
+  export const updateUserProfile = async (updatedData) => {
+    try {
+      console.log("Updating Profile:", updatedData);
+      const response = await API.put("/users/update_profile", updatedData); // Use correct endpoint
+      console.log(" Profile Updated:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      throw error;
+    }
+  };
