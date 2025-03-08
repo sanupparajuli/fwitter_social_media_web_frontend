@@ -1,0 +1,249 @@
+
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    border-right: 1px solid #e5e7eb;
+    padding: 16px;
+  }
+  .tweet-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .emoji-btn {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .emoji-btn:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    background: transparent !important; /* Prevents any background color change */
+    color: inherit !important; /* Keeps the same emoji color */
+  }
+  
+  /* Post Input */
+  .post-input {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 12px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-container .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-input textarea {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    resize: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f3f4f6;
+  }
+  
+  .post-input textarea:focus {
+    outline: none;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  
+  .post-actions button {
+    background-color: #f2801d;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .post-actions button:hover {
+    background-color: #0d8adb;
+  }
+  
+  /* Tweets */
+  .tweet-feed {
+    margin-top: 16px;
+  }
+  
+  .tweet {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .tweet-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tweet-header .avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .tweet-user {
+    margin-left: 12px;
+  }
+  
+  .tweet-user .name {
+    font-weight: bold;
+  }
+  
+  .tweet-user .handle {
+    color: gray;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  
+  .tweet-user .verified {
+    color: #1da1f2;
+    font-size: 14px;
+    margin-left: 3px;
+  }
+  
+  .tweet-user .time {
+    color: gray;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  
+  .tweet-content {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .tweet-image {
+    margin-top: 10px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  /* Sidebar */
+.sidebar {
+    width: 280px;
+    padding: 16px;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  /* Twitter Logo */
+  .twitter-logo {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+ 
+  /* Navigation Menu */
+  .nav-menu {
+    flex: 1;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-menu .nav-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .nav-menu .nav-item a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu .nav-item .icon {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  
+  .nav-menu .nav-item:hover,
+  .nav-menu .nav-item.active {
+    background-color: #e8f5fd;
+    color: #1da1f2;
+  }
+  
+  /* Tweet Button */
+  .tweet-button {
+    background-color: #1da1f2;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .tweet-button:hover {
+    background-color: #0d8adb;
+  }
+  
+  /* User Profile */
+  .user-profile {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .user-profile:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .user-profile .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info .name {
+    font-weight: bold;
+  }
+  
+  .user-info .handle {
+    color: gray;
+    font-size: 14px;
+  }
+  
