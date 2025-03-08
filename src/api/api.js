@@ -101,3 +101,15 @@ export const unretweet = async (tweetId) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+//  Create a Tweet
+export const createTweet = async (tweetData) => {
+  try {
+    console.log(" Creating Tweet:", tweetData);
+    const response = await API.post("/tweets/create_tweet", tweetData);
+    console.log(" Tweet Created:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(" Create Tweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
