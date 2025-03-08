@@ -113,3 +113,21 @@ export const createTweet = async (tweetData) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+export const deleteTweet = async (tweetId) => {
+  try {
+    console.log(`Deleting Tweet: ${tweetId}`);
+
+    const response = await API.delete(`/tweets/${tweetId}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`, // Ensure token is attached
+      },
+    });
+
+    console.log("Tweet Deleted:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Delete Tweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
