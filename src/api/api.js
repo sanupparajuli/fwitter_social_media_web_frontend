@@ -54,3 +54,14 @@ export const getAllTweets = async () => {
     throw error.response ? error.response.data : error.message;
   }
 };
+export const likeTweet = async (tweetId) => {
+  try {
+    console.log(`Liking Tweet: ${tweetId}`);
+    const response = await API.post(`/tweets/${tweetId}/like`);
+    console.log("Tweet Liked:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Like Tweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
