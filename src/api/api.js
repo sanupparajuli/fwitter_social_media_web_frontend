@@ -65,3 +65,15 @@ export const likeTweet = async (tweetId) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+export const unlikeTweet = async (tweetId) => {
+  try {
+    console.log(`Unliking Tweet: ${tweetId}`);
+    const response = await API.delete(`/tweets/${tweetId}/unlike`);
+    console.log(" Tweet Unliked:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(" Unlike Tweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
