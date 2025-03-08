@@ -77,3 +77,15 @@ export const unlikeTweet = async (tweetId) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+export const retweet = async (tweetId) => {
+  try {
+    console.log(` Retweeting: ${tweetId}`);
+    const response = await API.post(`/tweets/${tweetId}/retweet`);
+    console.log(" Retweeted:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(" Retweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
