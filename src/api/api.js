@@ -89,3 +89,15 @@ export const retweet = async (tweetId) => {
     throw error.response ? error.response.data : error.message;
   }
 };
+
+export const unretweet = async (tweetId) => {
+  try {
+    console.log(` Removing Retweet: ${tweetId}`);
+    const response = await API.delete(`/tweets/${tweetId}/unretweet`);
+    console.log(" Retweet Removed:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(" Unretweet Error:", error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
+  }
+};
